@@ -1,0 +1,69 @@
+.letter-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  
+  .letter {
+    width: 600px;
+    height: 400px;
+    background-color: #ffebcd;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .letter.closed {
+    transform: rotate(0deg);
+  }
+  
+  .letter.open {
+    transform: rotate(5deg);
+  }
+  
+  .letter-content {
+    padding: 20px;
+    font-family: 'Cursive', sans-serif;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transform: rotate(0deg); /* Ensure content does not rotate */
+  }
+  
+  .letter-content.fade-in {
+    opacity: 1;
+  }
+  
+  .letter-content.fade-out {
+    opacity: 0;
+  }
+  
+  .letter-text {
+    transform: rotate(0deg); /* Ensure text does not rotate */
+  }
+  
+  .letter-button {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .letter:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
